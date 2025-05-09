@@ -9,6 +9,7 @@
     margin: 0 auto 6rem;
   }
   
+  
   .projects ul li {
     display: flex;
     justify-content: space-between;
@@ -58,3 +59,26 @@
       min-width: auto;
     }
   }
+
+  .projects ul li .video-container {
+    width: 100%; /* Ocupa a largura total do contêiner pai */
+    max-width: 47rem; /* Define a largura máxima igual às imagens */
+    aspect-ratio: 47 / 26.4375; /* Mantém a proporção baseada na largura máxima e na altura esperada (calculada para 16:9 em 47rem) */
+    margin: 0 auto 4rem;
+    border: 3px solid #f5f5f5;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    display: flex; /* Adicionando flexbox para controlar o item interno */
+  }
+  
+  .projects ul li .video-container video {
+    display: block; /* Evita espaços extras abaixo do vídeo */
+    width: 100%; /* O vídeo ocupa toda a largura do container */
+    height: 100%; /* O vídeo ocupa toda a altura do container */
+    object-fit: cover; /* Garante que o vídeo cubra todo o espaço sem distorcer a proporção, cortando se necessário */
+  }
+  
+  
+  
